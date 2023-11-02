@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Light Dark Mode</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section class="header">
+        <div class="logo-title">
+            <h2>Mode Change</h2>
+        </div>
+        <img src="images/moon.png" alt="icon" id="icon">
+        </section>
+    <main>
+        <h1>Light and Dark Mode</h1>
+    </main>
+    <script>
+        var icon = document.querySelector("#icon");
+
+        icon.onclick = () => {
+            /*昼夜モードにする*/
+            document.body.classList.toggle("dark-mode");
+            if (document.body.classList.contains("dark-mode")){
+                icon.src = "images/sun.png";
+            }else{
+                icon.src = "images/moon.png";
+            }
+        };
+    </script>
+</body>
+</html>
